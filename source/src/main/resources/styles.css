@@ -1,0 +1,154 @@
+/* ── Base ───────────────────────────────────────────────────────────────── */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #f4f6f9;
+}
+
+/* ── Top navigation ─────────────────────────────────────────────────────── */
+.top-nav {
+    -fx-background-color: #1a237e;
+    -fx-padding: 0 16 0 16;
+    -fx-min-height: 50px;
+}
+.app-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 20 0 0;
+}
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #c5cae9;
+    -fx-border-color: transparent;
+    -fx-padding: 14 18 14 18;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+.nav-btn:hover {
+    -fx-background-color: #283593;
+    -fx-text-fill: white;
+}
+.nav-btn:selected {
+    -fx-background-color: #3949ab;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ── Status bar ─────────────────────────────────────────────────────────── */
+.status-bar {
+    -fx-background-color: #e8eaf6;
+    -fx-border-color: #c5cae9;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 4 16 4 16;
+    -fx-font-size: 11px;
+    -fx-text-fill: #555;
+}
+
+/* ── Screen containers ──────────────────────────────────────────────────── */
+.screen-container {
+    -fx-background-color: #f4f6f9;
+}
+.screen-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a237e;
+}
+.section-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #283593;
+}
+.hint-label {
+    -fx-text-fill: #777;
+    -fx-font-size: 11px;
+}
+
+/* ── Cards ──────────────────────────────────────────────────────────────── */
+.stat-card {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 16 20 16 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 4, 0, 0, 2);
+}
+.stat-label {
+    -fx-text-fill: #888;
+    -fx-font-size: 12px;
+}
+.stat-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+.stat-green  { -fx-text-fill: #2e7d32; }
+.stat-red    { -fx-text-fill: #c62828; }
+.stat-blue   { -fx-text-fill: #1565c0; }
+
+.panel-card {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 4, 0, 0, 2);
+}
+
+/* ── Buttons ────────────────────────────────────────────────────────────── */
+.button {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+    -fx-padding: 6 14 6 14;
+}
+.btn-primary {
+    -fx-background-color: #1565c0;
+    -fx-text-fill: white;
+}
+.btn-primary:hover { -fx-background-color: #0d47a1; }
+
+.btn-success {
+    -fx-background-color: #2e7d32;
+    -fx-text-fill: white;
+}
+.btn-success:hover { -fx-background-color: #1b5e20; }
+
+.btn-danger {
+    -fx-background-color: #c62828;
+    -fx-text-fill: white;
+}
+.btn-danger:hover { -fx-background-color: #b71c1c; }
+
+.action-btn {
+    -fx-background-color: #3949ab;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-padding: 10 14 10 14;
+}
+.action-btn:hover { -fx-background-color: #1a237e; }
+
+/* ── Table ──────────────────────────────────────────────────────────────── */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+}
+.table-view .column-header {
+    -fx-background-color: #e8eaf6;
+}
+.table-row-cell:selected {
+    -fx-background-color: #c5cae9;
+    -fx-text-fill: black;
+}
+
+/* ── Text fields / Combo ────────────────────────────────────────────────── */
+.text-field, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #bbb;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 5 8 5 8;
+}
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #1565c0;
+}

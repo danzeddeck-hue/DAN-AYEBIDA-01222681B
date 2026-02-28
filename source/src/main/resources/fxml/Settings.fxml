@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="20" styleClass="screen-container" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.studentmgmt.ui.controllers.SettingsController">
+    <padding><Insets top="24" right="24" bottom="24" left="24"/></padding>
+
+    <Label text="Settings" styleClass="screen-title"/>
+
+    <!-- At-risk threshold -->
+    <VBox styleClass="panel-card" spacing="12">
+        <Label text="At-Risk GPA Threshold" styleClass="section-title"/>
+        <Label text="Students with GPA below this value will appear in the At-Risk report." styleClass="hint-label" wrapText="true"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Threshold:"/>
+            <TextField fx:id="thresholdField" text="2.0" prefWidth="80"/>
+            <Button text="Save" onAction="#saveThreshold" styleClass="btn-primary"/>
+        </HBox>
+        <Label fx:id="thresholdStatus" text=""/>
+    </VBox>
+
+    <!-- Programmes -->
+    <VBox styleClass="panel-card" spacing="12">
+        <Label text="Manage Programmes" styleClass="section-title"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <TextField fx:id="progField" promptText="New programme name…" prefWidth="260"/>
+            <Button text="Add" onAction="#addProgramme" styleClass="btn-success"/>
+            <Button text="Remove Selected" onAction="#removeProgramme" styleClass="btn-danger"/>
+        </HBox>
+        <ListView fx:id="progList" prefHeight="200"/>
+    </VBox>
+
+    <VBox styleClass="panel-card" spacing="8">
+        <Label text="About" styleClass="section-title"/>
+        <Label text="Student Management System Plus  v1.0.0" />
+        <Label text="Developer: Dan Ayebida"/>
+        <Label text="Platform: Windows  |  JavaFX  |  SQLite  |  JDBC"/>
+    </VBox>
+</VBox>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="16" styleClass="screen-container" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.studentmgmt.ui.controllers.ReportsController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Reports" styleClass="screen-title"/>
+
+    <TabPane fx:id="reportTabs">
+
+        <!-- Tab 1: Top Performers -->
+        <Tab text="Top Performers" closable="false">
+            <VBox spacing="10">
+                <padding><Insets top="12" right="8" bottom="8" left="8"/></padding>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Programme:"/>
+                    <ComboBox fx:id="tpProgramme" promptText="All" prefWidth="160"/>
+                    <Label text="Level:"/>
+                    <ComboBox fx:id="tpLevel" promptText="All" prefWidth="90"/>
+                    <Button text="Run" onAction="#runTopPerformers" styleClass="btn-primary"/>
+                    <Button text="Export CSV" onAction="#exportTopPerformers"/>
+                </HBox>
+                <TableView fx:id="tpTable" prefHeight="400">
+                    <columns>
+                        <TableColumn fx:id="tpId"   text="ID"        prefWidth="110"/>
+                        <TableColumn fx:id="tpName" text="Name"      prefWidth="200"/>
+                        <TableColumn fx:id="tpProg" text="Programme" prefWidth="180"/>
+                        <TableColumn fx:id="tpLvl"  text="Level"     prefWidth="65"/>
+                        <TableColumn fx:id="tpGpa"  text="GPA"       prefWidth="65"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <!-- Tab 2: At Risk -->
+        <Tab text="At Risk Students" closable="false">
+            <VBox spacing="10">
+                <padding><Insets top="12" right="8" bottom="8" left="8"/></padding>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="GPA Threshold (below):"/>
+                    <TextField fx:id="arThreshold" text="2.0" prefWidth="80"/>
+                    <Button text="Run" onAction="#runAtRisk" styleClass="btn-primary"/>
+                    <Button text="Export CSV" onAction="#exportAtRisk"/>
+                </HBox>
+                <TableView fx:id="arTable" prefHeight="400">
+                    <columns>
+                        <TableColumn fx:id="arId"   text="ID"        prefWidth="110"/>
+                        <TableColumn fx:id="arName" text="Name"      prefWidth="200"/>
+                        <TableColumn fx:id="arProg" text="Programme" prefWidth="180"/>
+                        <TableColumn fx:id="arLvl"  text="Level"     prefWidth="65"/>
+                        <TableColumn fx:id="arGpa"  text="GPA"       prefWidth="65"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <!-- Tab 3: GPA Distribution -->
+        <Tab text="GPA Distribution" closable="false">
+            <VBox spacing="10">
+                <padding><Insets top="12" right="8" bottom="8" left="8"/></padding>
+                <Button text="Refresh" onAction="#runGpaDistribution" styleClass="btn-primary"/>
+                <TableView fx:id="gdTable" prefHeight="200">
+                    <columns>
+                        <TableColumn fx:id="gdBand"  text="GPA Band" prefWidth="200"/>
+                        <TableColumn fx:id="gdCount" text="Count"    prefWidth="100"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+
+        <!-- Tab 4: Programme Summary -->
+        <Tab text="Programme Summary" closable="false">
+            <VBox spacing="10">
+                <padding><Insets top="12" right="8" bottom="8" left="8"/></padding>
+                <Button text="Refresh" onAction="#runProgrammeSummary" styleClass="btn-primary"/>
+                <TableView fx:id="psTable" prefHeight="400">
+                    <columns>
+                        <TableColumn fx:id="psProg"  text="Programme"    prefWidth="250"/>
+                        <TableColumn fx:id="psTotal" text="Total"        prefWidth="80"/>
+                        <TableColumn fx:id="psAvg"   text="Average GPA"  prefWidth="120"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>

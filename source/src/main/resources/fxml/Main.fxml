@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.studentmgmt.ui.controllers.MainController"
+            stylesheets="@../styles.css">
+
+    <!-- Top navigation bar -->
+    <top>
+        <HBox styleClass="top-nav" alignment="CENTER_LEFT" spacing="0">
+            <Label text="📚 Student Management System Plus" styleClass="app-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <ToggleButton fx:id="btnDashboard" text="Dashboard" styleClass="nav-btn" onAction="#showDashboard" selected="true"/>
+            <ToggleButton fx:id="btnStudents" text="Students" styleClass="nav-btn" onAction="#showStudents"/>
+            <ToggleButton fx:id="btnReports" text="Reports" styleClass="nav-btn" onAction="#showReports"/>
+            <ToggleButton fx:id="btnImportExport" text="Import / Export" styleClass="nav-btn" onAction="#showImportExport"/>
+            <ToggleButton fx:id="btnSettings" text="Settings" styleClass="nav-btn" onAction="#showSettings"/>
+        </HBox>
+    </top>
+
+    <!-- Content area — swapped by controller -->
+    <center>
+        <StackPane fx:id="contentArea"/>
+    </center>
+
+    <!-- Status bar -->
+    <bottom>
+        <HBox styleClass="status-bar" alignment="CENTER_LEFT" spacing="12">
+            <Label fx:id="statusLabel" text="Ready"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Dan Ayebida  |  Student Management System Plus v1.0.0"/>
+        </HBox>
+    </bottom>
+</BorderPane>

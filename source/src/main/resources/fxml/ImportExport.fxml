@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="20" styleClass="screen-container" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.studentmgmt.ui.controllers.ImportExportController">
+    <padding><Insets top="24" right="24" bottom="24" left="24"/></padding>
+
+    <Label text="Import / Export" styleClass="screen-title"/>
+
+    <!-- Import section -->
+    <VBox styleClass="panel-card" spacing="12">
+        <Label text="Import Students from CSV" styleClass="section-title"/>
+        <Label text="CSV format: StudentID, FullName, Programme, Level, GPA, Email, PhoneNumber, DateAdded (YYYY-MM-DD), Status" styleClass="hint-label" wrapText="true"/>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Button text="📂 Choose CSV File &amp; Import" onAction="#importCsv" styleClass="btn-primary" prefWidth="230"/>
+            <Label fx:id="importFileLabel" text="No file selected"/>
+        </HBox>
+        <HBox spacing="16">
+            <Label text="Succeeded:"/>
+            <Label fx:id="lblSuccess" text="—" styleClass="stat-green"/>
+            <Label text="Errors:"/>
+            <Label fx:id="lblErrors"  text="—" styleClass="stat-red"/>
+        </HBox>
+        <Label fx:id="importStatusLabel" text="" wrapText="true" styleClass="hint-label"/>
+        <ListView fx:id="errorList" prefHeight="160" placeholder="No errors."/>
+    </VBox>
+
+    <!-- Export section -->
+    <VBox styleClass="panel-card" spacing="12">
+        <Label text="Export Data to CSV" styleClass="section-title"/>
+        <HBox spacing="12">
+            <Button text="📤 Export All Students"       onAction="#exportAll"           styleClass="btn-success" prefWidth="210"/>
+            <Button text="📤 Export Top Performers"     onAction="#exportTopPerformers"  prefWidth="210"/>
+            <Button text="📤 Export At-Risk Students"   onAction="#exportAtRisk"         prefWidth="210"/>
+        </HBox>
+        <Label fx:id="exportStatusLabel" text="" wrapText="true" styleClass="hint-label"/>
+    </VBox>
+</VBox>

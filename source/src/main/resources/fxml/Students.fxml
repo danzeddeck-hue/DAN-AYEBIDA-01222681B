@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.studentmgmt.ui.controllers.StudentsController"
+            styleClass="screen-container">
+
+    <!-- Top toolbar -->
+    <top>
+        <VBox spacing="10">
+            <padding><Insets top="16" right="16" bottom="8" left="16"/></padding>
+            <Label text="Students" styleClass="screen-title"/>
+            <HBox spacing="8" alignment="CENTER_LEFT">
+                <TextField fx:id="searchField" promptText="Search by ID or Name…" prefWidth="240"/>
+                <Button text="Search" onAction="#doSearch" styleClass="btn-primary"/>
+                <Button text="Clear"  onAction="#clearSearch"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <ComboBox fx:id="filterProgramme" promptText="Programme" prefWidth="150"/>
+                <ComboBox fx:id="filterLevel"     promptText="Level"     prefWidth="90"/>
+                <ComboBox fx:id="filterStatus"    promptText="Status"    prefWidth="100"/>
+                <Button text="Filter" onAction="#doFilter" styleClass="btn-primary"/>
+                <Button text="Sort by GPA"  onAction="#sortByGpa"/>
+                <Button text="Sort by Name" onAction="#sortByName"/>
+            </HBox>
+            <HBox spacing="8">
+                <Button text="➕ Add Student"    onAction="#showAddForm"    styleClass="btn-success"/>
+                <Button text="✏ Edit Selected"  fx:id="btnEdit" onAction="#showEditForm"   styleClass="btn-primary"/>
+                <Button text="🗑 Delete Selected" fx:id="btnDelete" onAction="#deleteSelected" styleClass="btn-danger"/>
+                <Button text="🔄 Refresh"        onAction="#refreshTable"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- Table -->
+    <center>
+        <TableView fx:id="studentTable" BorderPane.margin="$top" prefHeight="400">
+            <padding><Insets left="16" right="16" bottom="8"/></padding>
+            <columns>
+                <TableColumn fx:id="colId"      text="ID"          prefWidth="110"/>
+                <TableColumn fx:id="colName"    text="Full Name"   prefWidth="180"/>
+                <TableColumn fx:id="colProg"    text="Programme"   prefWidth="160"/>
+                <TableColumn fx:id="colLevel"   text="Level"       prefWidth="65"/>
+                <TableColumn fx:id="colGpa"     text="GPA"         prefWidth="65"/>
+                <TableColumn fx:id="colEmail"   text="Email"       prefWidth="180"/>
+                <TableColumn fx:id="colPhone"   text="Phone"       prefWidth="120"/>
+                <TableColumn fx:id="colDate"    text="Date Added"  prefWidth="110"/>
+                <TableColumn fx:id="colStatus"  text="Status"      prefWidth="80"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- Add/Edit form panel (right side, hidden by default) -->
+    <right>
+        <VBox fx:id="formPanel" spacing="10" prefWidth="320" visible="false" managed="false">
+            <padding><Insets top="16" right="16" bottom="16" left="12"/></padding>
+            <Label fx:id="formTitle" text="Add Student" styleClass="section-title"/>
+            <Label text="Student ID *"/>
+            <TextField fx:id="fldId" promptText="e.g. STU001"/>
+            <Label text="Full Name *"/>
+            <TextField fx:id="fldName" promptText="e.g. John Doe"/>
+            <Label text="Programme *"/>
+            <ComboBox fx:id="fldProgramme" editable="true" prefWidth="280"/>
+            <Label text="Level *"/>
+            <ComboBox fx:id="fldLevel" prefWidth="280"/>
+            <Label text="GPA *  (0.0 – 4.0)"/>
+            <TextField fx:id="fldGpa" promptText="e.g. 3.50"/>
+            <Label text="Email *"/>
+            <TextField fx:id="fldEmail" promptText="e.g. john@example.com"/>
+            <Label text="Phone *  (digits only, 10–15)"/>
+            <TextField fx:id="fldPhone" promptText="e.g. 0201234567"/>
+            <Label text="Status *"/>
+            <ComboBox fx:id="fldStatus" prefWidth="280"/>
+            <HBox spacing="8">
+                <Button text="Save"   onAction="#saveStudent"  styleClass="btn-success" prefWidth="130"/>
+                <Button text="Cancel" onAction="#cancelForm"   prefWidth="130"/>
+            </HBox>
+        </VBox>
+    </right>
+</BorderPane>
