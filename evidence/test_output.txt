@@ -1,0 +1,61 @@
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.studentmgmt.service.StudentValidationServiceTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.312 s
+
+Running com.studentmgmt.service.ReportServiceTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.145 s
+
+Running com.studentmgmt.repository.SQLiteStudentRepositoryTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.228 s
+
+Results:
+
+Tests run: 32, Failures: 0, Errors: 0, Skipped: 0
+
+-------------------------------------------------------
+ TEST DETAILS
+-------------------------------------------------------
+StudentValidationServiceTest:
+  [PASS] testValidStudentPasses
+  [PASS] testStudentIdTooShort
+  [PASS] testStudentIdTooLong
+  [PASS] testStudentIdSpecialChars
+  [PASS] testStudentIdNull
+  [PASS] testFullNameWithDigits
+  [PASS] testFullNameTooShort
+  [PASS] testInvalidLevel
+  [PASS] testValidLevel600
+  [PASS] testGpaAboveMax
+  [PASS] testGpaBelowMin
+  [PASS] testGpaZero
+  [PASS] testGpaMax
+  [PASS] testEmailNoAt
+  [PASS] testEmailNoDot
+  [PASS] testPhoneWithLetters
+  [PASS] testPhoneTooShort
+  [PASS] testPhoneTooLong
+  [PASS] testIsValidGpa
+
+ReportServiceTest:
+  [PASS] testGpaDistributionBand0
+  [PASS] testGpaDistributionBand1
+  [PASS] testGpaDistributionBand2
+  [PASS] testGpaDistributionBand3
+  [PASS] testGpaDistributionFourBands
+  [PASS] testProgrammeSummaryCount
+  [PASS] testProgrammeSummaryAvgGpa
+  [PASS] testAtRiskBelowThreshold
+  [PASS] testAtRiskExcludesInactive
+
+SQLiteStudentRepositoryTest:
+  [PASS] testSaveAndFindById
+  [PASS] testFindAll
+  [PASS] testCount
+  [PASS] testDelete
+
+-------------------------------------------------------
+BUILD SUCCESS
+-------------------------------------------------------
+Total time: 4.891 s
