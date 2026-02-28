@@ -1,0 +1,64 @@
+==============================================================
+  STUDENT MANAGEMENT SYSTEM PLUS  –  RUN INSTRUCTIONS
+  Developer: Dan Ayebida
+  Version: 1.0.0
+==============================================================
+
+JDK Version Used: Java 17 (tested with OpenJDK 17.0.9)
+JavaFX Version:   JavaFX SDK 21.0.1
+
+
+--------------------------------------------------------------
+  OPTION A: Run with Maven (easiest)
+--------------------------------------------------------------
+
+  Prerequisites: Java 17+ and Maven 3.8+ on your PATH.
+
+  1. Open a terminal / Command Prompt in the project root folder.
+  2. Run:
+
+       mvn javafx:run
+
+
+--------------------------------------------------------------
+  OPTION B: Run the JAR with manual VM options
+--------------------------------------------------------------
+
+  1. Download JavaFX SDK 21.0.1 from:
+       https://gluonhq.com/products/javafx/
+
+  2. Extract to:
+       C:\javafx\javafx-sdk-21\
+
+  3. Build the project:
+       mvn clean package
+
+  4. Run the JAR:
+
+       java --module-path "C:\javafx\javafx-sdk-21\lib" ^
+            --add-modules javafx.controls,javafx.fxml ^
+            -jar target\StudentManagementSystemPlus-1.0.0.jar
+
+  Note: Replace the module-path with the actual location of
+  your JavaFX SDK lib folder if different.
+
+
+--------------------------------------------------------------
+  VM OPTIONS SUMMARY
+--------------------------------------------------------------
+
+  --module-path "C:\javafx\javafx-sdk-21\lib"
+  --add-modules javafx.controls,javafx.fxml
+
+
+--------------------------------------------------------------
+  NOTES
+--------------------------------------------------------------
+
+  - The app runs fully OFFLINE. No internet connection needed.
+  - All data is stored in the data\ folder next to the JAR.
+  - Database file: data\students.db
+  - Logs:          data\app.log
+  - Exports:       data\*.csv
+
+==============================================================
