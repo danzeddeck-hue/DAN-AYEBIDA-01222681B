@@ -1,0 +1,16 @@
+StudentID,FullName,Programme,Level,GPA,Email,PhoneNumber,DateAdded,Status
+STU001,Alice Mensa,Computer Science,300,3.90,alice@example.com,0201111111,2024-09-01,Active
+STU002,Bob Yaw Asante,Information Technology,200,1.50,bob@example.com,0202222222,2024-09-01,Active
+STU003,Carol Ama Boateng,Computer Science,400,2.80,carol@example.com,0203333333,2024-09-01,Active
+STU004,Dan Kofi Mensah,Electrical Engineering,100,0.80,dan@example.com,0204444444,2024-09-01,Active
+STU005,Eve Abena Owusu,Software Engineering,300,3.50,eve@example.com,0205555555,2024-09-02,Active
+STU006,Frank Kwesi Adu,Business Administration,500,3.10,frank@example.com,0206666666,2024-09-02,Active
+STU007,Grace Adjoa Tetteh,Computer Science,100,1.80,grace@example.com,0207777777,2024-09-03,Active
+STU008,Henry Kojo Darko,Information Technology,200,2.20,henry@example.com,0208888888,2024-09-03,Inactive
+STU009,Irene Akosua Frimpong,Electrical Engineering,600,3.80,irene@example.com,0209999999,2024-09-04,Active
+STU010,James Fiifi Mensah,Computer Science,400,2.00,james@example.com,0200000001,2024-09-04,Active
+STU011,Kate Esi Ankrah,Information Technology,300,1.10,kate@example.com,0200000002,2024-09-05,Active
+STU012,Leo Kwame Amoah,Electrical Engineering,200,3.30,leo@example.com,0200000003,2024-09-05,Active
+STU013,Mary Akua Ofori,Nursing,100,3.70,mary@example.com,0200000004,2024-09-06,Active
+STU014,Nathan Yaw Boateng,Business Administration,300,2.60,nathan@example.com,0200000005,2024-09-06,Active
+STU015,Olivia Ama Asare,Software Engineering,400,3.20,olivia@example.com,0200000006,2024-09-07,Active

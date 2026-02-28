@@ -1,0 +1,12 @@
+[2026-02-01 09:00:01] [INFO] Application starting.
+[2026-02-01 09:00:01] [INFO] Database connection established: jdbc:sqlite:data/students.db
+[2026-02-01 09:00:01] [INFO] Database schema initialized.
+[2026-02-01 09:03:15] [INFO] Student added with ID: STU001
+[2026-02-01 09:04:22] [INFO] Student added with ID: STU002
+[2026-02-01 09:05:44] [INFO] Student updated with ID: STU001
+[2026-02-01 09:10:05] [INFO] Import summary: 15 succeeded, 0 errors.
+[2026-02-01 09:12:30] [INFO] Exported 15 students to data/students_export_20260201_091230.csv
+[2026-02-01 09:12:45] [INFO] Exported top performers (10) to data/top_performers_export_20260201_091245.csv
+[2026-02-01 09:13:00] [INFO] At-risk threshold updated to 2.0
+[2026-02-01 09:45:22] [INFO] Application closing.
+[2026-02-01 09:45:22] [INFO] Database connection closed.
